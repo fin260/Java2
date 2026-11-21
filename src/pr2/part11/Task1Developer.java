@@ -1,13 +1,14 @@
 package pr2.part11;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Task1Developer {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         SimpleDateFormat fmt = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
-        // Дата и время получения задания задаются фиксированно
-        Date received = new Date(1778400000000L);
+        // Дата и время получения задания
+        Date received = fmt.parse("15.10.2026 12:30:00");
         // Дата и время сдачи - текущие
         Date submitted = new Date();
         System.out.println("Разработчик: Пожаров");
